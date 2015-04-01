@@ -1,0 +1,6 @@
+framework module RoundImageView {
+  umbrella header "Pods-Quotes-RoundImageView-umbrella.h"
+
+  export *
+  module * { export * }
+}

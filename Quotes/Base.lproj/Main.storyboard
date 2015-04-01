@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C2513" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="HOb-AC-RO4">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+    </dependencies>
+    <scenes>
+        <!--Quotes-->
+        <scene sceneID="aSY-6f-MhD">
+            <objects>
+                <collectionViewController id="4pD-Ze-3ng" customClass="QuotesViewControllerCollectionViewController" customModule="Quotes" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="C5O-ei-rb1">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.32941176470588235" green="0.44705882352941179" blue="0.5490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ihX-TB-yaB">
+                            <size key="itemSize" width="280" height="180"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="QuoteCell" id="Td8-JI-0Ig" customClass="QuoteCell" customModule="Quotes" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="240"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zmt-nM-2bR" customClass="PanelView" customModule="Quotes" customModuleProvider="target">
+                                            <rect key="frame" x="8" y="20" width="284" height="212"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qsx-e3-2ld">
+                                                    <rect key="frame" x="12" y="12" width="41" height="20"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" text="Teste teste teste" translatesAutoresizingMaskIntoConstraints="NO" id="5O5-QJ-RTG">
+                                                    <rect key="frame" x="12" y="44" width="240" height="96"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.34901960780000002" green="0.13725490200000001" blue="0.086274509799999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="Qsx-e3-2ld" firstAttribute="leading" secondItem="Zmt-nM-2bR" secondAttribute="leading" constant="12" id="2qr-PF-5WY"/>
+                                                <constraint firstAttribute="trailing" secondItem="5O5-QJ-RTG" secondAttribute="trailing" constant="12" id="eKR-ZD-OzI"/>
+                                                <constraint firstItem="5O5-QJ-RTG" firstAttribute="leading" secondItem="Zmt-nM-2bR" secondAttribute="leading" constant="12" id="eXS-vv-RBF"/>
+                                                <constraint firstItem="Qsx-e3-2ld" firstAttribute="top" secondItem="Zmt-nM-2bR" secondAttribute="top" constant="12" id="g5u-iy-Rc6"/>
+                                                <constraint firstItem="5O5-QJ-RTG" firstAttribute="top" secondItem="Qsx-e3-2ld" secondAttribute="bottom" constant="12" id="xpY-v7-ElL"/>
+                                                <constraint firstAttribute="bottom" secondItem="5O5-QJ-RTG" secondAttribute="bottom" constant="12" id="zUr-my-RRs"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BruceLee" translatesAutoresizingMaskIntoConstraints="NO" id="5tW-PA-awe" customClass="RoundImageView" customModule="RoundImageView">
+                                            <rect key="frame" x="220" y="8" width="60" height="60"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="60" id="LbA-iD-WsV"/>
+                                                <constraint firstAttribute="height" constant="60" id="bz0-wh-bAP"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="2"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                    <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Zmt-nM-2bR" secondAttribute="trailing" constant="8" id="1pi-pX-EwS"/>
+                                    <constraint firstAttribute="trailing" secondItem="5tW-PA-awe" secondAttribute="trailing" constant="20" id="NmW-16-4Uc"/>
+                                    <constraint firstItem="5tW-PA-awe" firstAttribute="top" secondItem="Td8-JI-0Ig" secondAttribute="top" constant="8" id="ejB-SL-bLQ"/>
+                                    <constraint firstItem="Zmt-nM-2bR" firstAttribute="top" secondItem="Td8-JI-0Ig" secondAttribute="top" constant="20" id="l3j-g5-cTW"/>
+                                    <constraint firstItem="Zmt-nM-2bR" firstAttribute="leading" secondItem="Td8-JI-0Ig" secondAttribute="leading" constant="8" id="mzT-6V-Apk"/>
+                                    <constraint firstAttribute="bottom" secondItem="Zmt-nM-2bR" secondAttribute="bottom" constant="8" id="owg-UI-q2I"/>
+                                </constraints>
+                                <size key="customSize" width="300" height="240"/>
+                                <connections>
+                                    <outlet property="personNameLabel" destination="Qsx-e3-2ld" id="wWl-TZ-NZL"/>
+                                    <outlet property="personPictureImageView" destination="5tW-PA-awe" id="VZx-hr-yYc"/>
+                                    <outlet property="quoteTextView" destination="5O5-QJ-RTG" id="56M-57-fZK"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="4pD-Ze-3ng" id="igK-Vf-gdw"/>
+                            <outlet property="delegate" destination="4pD-Ze-3ng" id="bWt-lr-MTQ"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Quotes" id="eoO-or-Poz"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sSz-k4-FB7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1280" y="476"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6SW-eS-22C">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HOb-AC-RO4" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mjk-bF-xoI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="4pD-Ze-3ng" kind="relationship" relationship="rootViewController" id="IfV-7s-9Ys"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gf5-SN-6aU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="476"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="BruceLee" width="931" height="1024"/>
+    </resources>
+</document>

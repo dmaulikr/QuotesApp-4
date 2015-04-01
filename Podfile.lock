@@ -1,0 +1,10 @@
+PODS:
+  - RoundImageView (1.0.1)
+
+DEPENDENCIES:
+  - RoundImageView (~> 1.0.1)
+
+SPEC CHECKSUMS:
+  RoundImageView: af3ea25d9b69456749c5b4da68e513060ddbd428
+
+COCOAPODS: 0.36.0
